@@ -18,7 +18,7 @@ function routes(app){
     app.post('/register', registeruser);
     app.post('/login',login);
 
-    //Optional
+    //Optional - ADDING DELETING UPDATING WITHOUT TOKEN
     app.post('/api/product', createproduct)
     app.put('/api/product/:id',updateproduct)
     app.delete('/api/product/:id',deleteproduct);

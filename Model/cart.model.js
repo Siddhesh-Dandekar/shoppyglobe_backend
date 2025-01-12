@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+//Creating Schema for Cart items
 const cartSchema = mongoose.Schema({
    productid: String,
    title: String,
@@ -8,6 +9,7 @@ const cartSchema = mongoose.Schema({
    thumbnail: String,
 })
 
+//Creating model using cart schema
 const cartModel = mongoose.model('cartitems', cartSchema);
 
 export default cartModel;

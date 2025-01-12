@@ -40,7 +40,7 @@ export function updatecartitem(req, res) {
             return res.status(400).json({ message: "quantity should be more or equal to 1" })
         }
         cartModel.findOneAndUpdate({ productid: id }, { quantity: quantity }).then(data => {
-            res.status(200).send(data);
+            cartModel.findById(data._id).then(prod => res.status(200).send(prod))
         }).catch(err => res.status(500).json({ message: err.message }));
     }
     else {
