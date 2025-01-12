@@ -2,7 +2,10 @@ import mongoose from 'mongoose';
 
 //Creating Schema for Cart items
 const cartSchema = mongoose.Schema({
-   productid: String,
+   productid: {
+      type: String,
+      required : true
+   },
    title: String,
    price: Number,
    quantity: Number,
