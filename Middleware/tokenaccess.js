@@ -16,7 +16,7 @@ function verifytoken(req, res, next){
         });
     }
     else{
-        res.status(400).json({message : 'Access Denied'})
+        return res.status(400).json({message : 'Access Denied'})
     }
 }
 
